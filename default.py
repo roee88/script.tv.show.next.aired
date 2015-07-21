@@ -112,7 +112,7 @@ def normalize(d, key = None, default = ""):
         if not text:
             return text
     try:
-        text = unicodedata.normalize('NFKD', _unicode(text)).encode('ascii', 'ignore')
+        text = unicodedata.normalize('NFKD', _unicode(text))
     except:
         pass
     return text
